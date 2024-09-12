@@ -1,56 +1,49 @@
-//
-//  ContentView.swift
-//  foodscanner
-//
-//  Created by felipe ivan on 09/09/24.
-//
-
 import SwiftUI
 import SwiftData
+import CodeScanner
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+
+    @State private var scannedCode: String?
+    @State private var showingResult = false
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+        ZStack {
+            
+            CodeScannerView(codeTypes: [.ean13], scanMode: .continuous) { response in
+                switch response {
+                case .success(let result):
+                    print("Found code: \(result.string)")
+                    scannedCode = result.string
+                    showingResult = true
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
             }
-        } detail: {
-            Text("Select an item")
+                .ignoresSafeArea()
+            .sheet(isPresented: $showingResult) {
+                if let code = scannedCode {
+                                   ProductInfoView(productCode: code)
+                               } else {
+                                   ProductInfoView(productCode: "")
+                               }
+                               
+        }
+            TopCameraView()
         }
     }
+}
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+struct ResultView: View {
+    let scannedCode: String
+    
+    var body: some View {
+        VStack {
+            Text("Scanned Code:")
+            Text(scannedCode)
+                .font(.largeTitle)
+            // Add more views here to display product information
         }
     }
 }
