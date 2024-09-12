@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2A5FE52C9344480013CCDA /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5FE42C9344480013CCDA /* CameraView.swift */; };
+		5E2A5FE72C93446F0013CCDA /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5FE62C93446F0013CCDA /* NutritionView.swift */; };
+		5E2A5FE92C9344740013CCDA /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5FE82C9344740013CCDA /* ProductViewModel.swift */; };
+		5E2A5FEB2C9344790013CCDA /* TopCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2A5FEA2C9344790013CCDA /* TopCameraView.swift */; };
 		5E4ECE2F2C8F5B1E0094031F /* foodscannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4ECE2E2C8F5B1E0094031F /* foodscannerApp.swift */; };
 		5E4ECE312C8F5B1E0094031F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4ECE302C8F5B1E0094031F /* ContentView.swift */; };
 		5E4ECE332C8F5B1E0094031F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4ECE322C8F5B1E0094031F /* Item.swift */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E2A5FE42C9344480013CCDA /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = ../CameraView.swift; sourceTree = "<group>"; };
+		5E2A5FE62C93446F0013CCDA /* NutritionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NutritionView.swift; path = "../../../Downloads/untitled folder/NutritionView.swift"; sourceTree = "<group>"; };
+		5E2A5FE82C9344740013CCDA /* ProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductViewModel.swift; path = "../../../Downloads/untitled folder/ProductViewModel.swift"; sourceTree = "<group>"; };
+		5E2A5FEA2C9344790013CCDA /* TopCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopCameraView.swift; path = "../../../Downloads/untitled folder/TopCameraView.swift"; sourceTree = "<group>"; };
 		5E4ECE2B2C8F5B1D0094031F /* foodscanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodscanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4ECE2E2C8F5B1E0094031F /* foodscannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodscannerApp.swift; sourceTree = "<group>"; };
 		5E4ECE302C8F5B1E0094031F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,8 +62,12 @@
 			isa = PBXGroup;
 			children = (
 				5E4ECE2E2C8F5B1E0094031F /* foodscannerApp.swift */,
+				5E2A5FE42C9344480013CCDA /* CameraView.swift */,
 				5E4ECE302C8F5B1E0094031F /* ContentView.swift */,
 				5E4ECE322C8F5B1E0094031F /* Item.swift */,
+				5E2A5FE62C93446F0013CCDA /* NutritionView.swift */,
+				5E2A5FE82C9344740013CCDA /* ProductViewModel.swift */,
+				5E2A5FEA2C9344790013CCDA /* TopCameraView.swift */,
 				5E4ECE342C8F5B1F0094031F /* Assets.xcassets */,
 				5E4ECE362C8F5B1F0094031F /* Preview Content */,
 			);
@@ -142,7 +154,11 @@
 			files = (
 				5E4ECE312C8F5B1E0094031F /* ContentView.swift in Sources */,
 				5E4ECE332C8F5B1E0094031F /* Item.swift in Sources */,
+				5E2A5FE92C9344740013CCDA /* ProductViewModel.swift in Sources */,
 				5E4ECE2F2C8F5B1E0094031F /* foodscannerApp.swift in Sources */,
+				5E2A5FE52C9344480013CCDA /* CameraView.swift in Sources */,
+				5E2A5FE72C93446F0013CCDA /* NutritionView.swift in Sources */,
+				5E2A5FEB2C9344790013CCDA /* TopCameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
